@@ -11,7 +11,6 @@
 
 
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,9 +23,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
-
-
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +34,6 @@
         android:layout_alignTop="@+id/encrypt"
         android:layout_alignEnd="@+id/textView2" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,16 +41,19 @@
         android:text="To use the affine cipher, please select a value from the drop down menu for a. Enter another value for b."
         android:id="@+id/textView2"
         android:layout_above="@+id/affine"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="80dp" />
+        android:layout_marginBottom="80dp"
+        android:layout_below="@+id/output"
+        android:layout_alignParentEnd="true" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/a"
+        android:spinnerMode="dropdown"
         android:layout_alignTop="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="99dp" />
+        android:layout_marginTop="99dp"
+        android:dropDownSelector="#9e1515" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -69,7 +67,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Enter the text to be encrypted"
-        android:id="@+id/editText"
+        android:id="@+id/input"
         android:layout_below="@+id/b"
         android:layout_alignParentStart="true" />
 
@@ -79,8 +77,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="The encrypted text is"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/editText"
+        android:id="@+id/output"
+        android:layout_below="@+id/input"
         android:layout_alignParentStart="true" />
 
 

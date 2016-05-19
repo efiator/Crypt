@@ -1,4 +1,4 @@
-package com.liziator.crypt;
+package com.ll.crypt;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

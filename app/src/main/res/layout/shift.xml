@@ -17,22 +17,19 @@
         android:layout_height="wrap_content"
         android:text="Encrypt"
         android:id="@+id/encrypt"
-        android:onClick="onClick"
+        android:onClick="encrypt"
         android:textColor="#490b0b"
         android:singleLine="false"
         android:layout_marginBottom="46dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
-
-
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Decrypt"
         android:id="@+id/decrypt"
-        android:onClick="onClick"
+        android:onClick="decrypt"
         android:textColor="#490b0b"
         android:singleLine="false"
         android:layout_alignTop="@+id/encrypt"
@@ -63,19 +60,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="The encrypted text is"
-        android:id="@+id/textView4"
+        android:text="the "
+        android:id="@+id/output"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/key"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Enter the key to be used"
-        android:id="@+id/editText2"
-        android:layout_above="@+id/editText"
-        android:layout_alignEnd="@+id/textView4" />
+        android:id="@+id/key"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATTACK"
+        android:id="@+id/attack"
+        android:onClick="attack"
+        android:textColor="#490b0b"
+        android:singleLine="false"
+        android:layout_alignTop="@+id/encrypt"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

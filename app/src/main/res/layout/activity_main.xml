@@ -45,8 +45,8 @@
         android:layout_height="wrap_content"
         android:text="Shift"
         android:id="@+id/button"
-        android:layout_alignBottom="@+id/affine"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/affine"
+        android:layout_alignEnd="@+id/textView2" />
 
     <TextView
         android:layout_width="wrap_content"

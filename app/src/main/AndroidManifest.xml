@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.liziator.crypt">
+    package="com.ll.crypt">
 
     <application
         android:allowBackup="true"
@@ -14,6 +14,17 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AffineActivity"
+            android:label="@string/affineactivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.AFFINE" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

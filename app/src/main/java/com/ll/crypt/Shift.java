@@ -1,4 +1,4 @@
-/*
+package com.ll.crypt;/*
 *Author: Elizabeth Fiator 
 *Version: April 11, 2016
 *Description and Background: The purpose of this project is 
@@ -21,21 +21,6 @@ import java.util.*;
 
 public class Shift
 {
-    /*public final static void main(String[]args)
-    {
-        String text="";
-        //Gets the encrypted text from the user and generates a set of possible keys.
-        String inputValue = JOptionPane.showInputDialog("Please input the encrypted text");
-        inputValue=inputValue.toUpperCase();
-
-        int [] k=Shift.key(inputValue);
-        for(int i=0; i<k.length;i++)
-        {
-            text=Shift.decrypt(inputValue, k[i]);
-            System.out.println("A possible decrypted text is: " +text);
-        }
-    }*/
-
     /*
     This method calculates the frequency of all letters within an encrypted text and
     stores it in an array.
@@ -126,13 +111,10 @@ public class Shift
 
     /*This calculates the possible keys of the encrypted text
     */
-    public static int [] key(String txt)
+    public static int [] key(int j, String txt)
     {
         String ptxt="";
         txt=txt.toUpperCase();
-        String inputValue1 = JOptionPane.showInputDialog("Please input a value");//gets  a value from the user
-        int j= Integer.parseInt(inputValue1);//converts it into an int
-
         int [] pfreq=Shift.sort(numOccur());//sorts the frequency of of plaintext alphabets
         int []cfreq=Shift.sort(cfreq(txt));//sorts the frequency of encrypted text alphabets
 
@@ -179,6 +161,41 @@ public class Shift
             }
         }
         return ptxt;
+    }
+
+    public static String encrypt(String ptxt, int k)
+    {
+        char c;
+        String ctxt = "";
+        String [] splitStr = ptxt.split(" "); //splits the decrypted text
+        for(int j=0; j<splitStr.length;j++)
+        {
+            String string = splitStr[j];
+            ctxt=ctxt+" ";  //properly spaces out the text
+            for(int i=0; i<string.length(); i++)
+            {
+                c=string.charAt(i);
+                if(Character.isLetter(c))
+
+                {
+                    ctxt = ctxt+(char) (((string.charAt(i)+k)%26)+65);
+                }
+            }
+        }
+        return ctxt;
+    }
+
+    public String attack(String input, int j)
+    {
+        input=input.toUpperCase();
+        String text = " ";
+        int [] k=Shift.key(j,input);
+        for(int i=0; i<k.length;i++)
+        {
+            text=Shift.decrypt(input, k[i]);
+            System.out.println("A possible decrypted text is: " +text);
+        }
+        return text;
     }
 
 }

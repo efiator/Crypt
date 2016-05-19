@@ -1,3 +1,5 @@
+package com.ll.crypt;
+
 /*
  Author: Elizabeth Fiator
  Version: April 10, 2016
@@ -14,26 +16,9 @@
 //import javax.swing.JOptionPane;
 public class AffineCipher
 {
-    private final static String string = JOptionPane.showInputDialog("Please enter the string to be encrypted");
-    //Gets the a and b values from the user to be used in the affine cipher equation
-    private final static String inputValue = JOptionPane.showInputDialog("Please input a value for a");
-    private static int a= Integer.parseInt(inputValue);
-    private final static String inputValue1 = JOptionPane.showInputDialog("Please input a value for b");
-    private static int b= Integer.parseInt(inputValue1);
 
-
-    public final static void main(String[]args)
-    {
-        //Encrypts and decrypts a string from the user
-        String txt = string.toUpperCase();
-        System.out.println("The string to be encrypted is "+ txt);
-        String ctxt = AffineCipher.encrypt(txt);
-        System.out.println("The encrypted text is "+ctxt);
-        String ptxt = AffineCipher.decrypt(ctxt);
-        System.out.println("The decrypted text is "+ptxt);
-    }
     //Encrypts the string and takes an input of plain text
-    public static String encrypt(String ptxt)
+    public static String encrypt(int a, int b, String ptxt)
     {
         //The encrypted or ciphered text will be stored in this string
         String ctxt = "";
@@ -51,7 +36,7 @@ public class AffineCipher
     find the correct numerical value of the plaintext
     The parameter is the ciphered text
     */
-    public static String decrypt(String ctxt)
+    public static String decrypt(int a, int b, String ctxt)
     {
         String ptxt = "";
         int inv_a =0;

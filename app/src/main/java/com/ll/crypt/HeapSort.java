@@ -1,3 +1,5 @@
+package com.ll.crypt;
+
 /***
  * @author: Elizabeth Fiator
  * @version: February 13, 2016
@@ -8,7 +10,7 @@ public class HeapSort {
 
     private static int heapsize;
     //density []A=new density();
-    public freq [] heapsort(freq []A)
+    public freq[] heapsort(freq []A)
     {
         //int [] A is the pre-condition
         buildMaxHeap(A);//builds a max heap

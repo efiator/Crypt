@@ -1,4 +1,4 @@
-package com.liziator.crypt;
+package com.ll.crypt;
 
 import org.junit.Test;
 
