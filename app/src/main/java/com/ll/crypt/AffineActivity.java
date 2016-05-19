@@ -30,7 +30,7 @@ public class AffineActivity extends AppCompatActivity
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.afine);
+        setContentView(R.layout.affine);
 
         // Spinner element
         spinner1 = (Spinner) findViewById(R.id.a);
@@ -119,7 +119,18 @@ public class AffineActivity extends AppCompatActivity
 
     private void encrypt(View view)
     {
+        String txt = inputTxt.getText().toString();
+        AffineCipher affine = new AffineCipher();
+        String result = affine.encrypt(a,b,txt);
+        outputTxt.setText(result);
+    }
 
+    private void decrypt(View view)
+    {
+        String txt = inputTxt.getText().toString();
+        AffineCipher affine = new AffineCipher();
+        String result = affine.decrypt(a, b, txt);
+        outputTxt.setText(result);
     }
 }
 

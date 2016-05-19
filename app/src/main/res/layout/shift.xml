@@ -12,6 +12,59 @@
 
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="A shift cipher encrypts text uses a numerical key to shift the plaintext to generate the ciphertext."
+        android:id="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="80dp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter the text to be encrypted"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter the key to be used"
+        android:id="@+id/key"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" "
+        android:id="@+id/output"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/key"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATTACK"
+        android:id="@+id/attack"
+        android:onClick="attack"
+        android:textColor="#490b0b"
+        android:singleLine="false"
+        android:layout_alignTop="@+id/encrypt"
+        android:layout_centerHorizontal="true" />
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,57 +88,6 @@
         android:layout_alignTop="@+id/encrypt"
         android:layout_alignEnd="@+id/textView2" />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="A shift cipher encrypts text uses a numerical key to shift the plaintext to generate the ciphertext."
-        android:id="@+id/textView2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="80dp" />
-
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Enter the text to be encrypted"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="the "
-        android:id="@+id/output"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/key"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Enter the key to be used"
-        android:id="@+id/key"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ATTACK"
-        android:id="@+id/attack"
-        android:onClick="attack"
-        android:textColor="#490b0b"
-        android:singleLine="false"
-        android:layout_alignTop="@+id/encrypt"
-        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
