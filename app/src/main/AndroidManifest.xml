@@ -18,17 +18,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ShiftActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AffineActivity"
-            android:label="@string/affineactivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Shiftact"
+            android:label="@string/title_activity_shiftact"
+            android:parentActivityName=".ShiftActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.AFFINE" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ll.crypt.ShiftActivity" />
         </activity>
+        <activity
+            android:name=".Affine"
+            android:label="@string/title_activity_affine"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

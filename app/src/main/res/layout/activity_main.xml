@@ -34,10 +34,8 @@
         android:layout_height="wrap_content"
         android:text="Affine"
         android:id="@+id/affine"
-        android:onClick="onClick"
+        android:onClick="affine"
         android:layout_centerVertical="true"
-        android:textColor="#490b0b"
-        android:singleLine="false"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -45,6 +43,7 @@
         android:layout_height="wrap_content"
         android:text="Shift"
         android:id="@+id/button"
+        android:onClick="shift"
         android:layout_below="@+id/affine"
         android:layout_alignEnd="@+id/textView2" />
 

@@ -17,7 +17,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Button;
 
-public class AffineActivity extends AppCompatActivity
+public class Affine extends AppCompatActivity
 {
     private Button btnEcnrypt;
     private Button btnDecrypt;
@@ -36,29 +36,29 @@ public class AffineActivity extends AppCompatActivity
         spinner1 = (Spinner) findViewById(R.id.a);
         spinner2 = (Spinner) findViewById(R.id.b);
         // Spinner click listener
-       // spinner1.setOnItemSelectedListener(this);
-               // On selecting a spinner item
+        // spinner1.setOnItemSelectedListener(this);
+        // On selecting a spinner item
 
-       // spinner2.setOnItemSelectedListener(this);
+        // spinner2.setOnItemSelectedListener(this);
         // On selecting a spinner item
 
 
         // Spinner Drop down elements
         List<Integer> aValues = new ArrayList<Integer>();
-       for(int i=1; i<27;i++)
-       {
-           if(i%26 !=0)
-           {
-               aValues.add(i);
-           }
-       }
+        for(int i=1; i<27;i++)
+        {
+            if(i%26 !=0)
+            {
+                aValues.add(i);
+            }
+        }
         // Spinner click listener
 
         // Spinner Drop down elements
         List<Integer> bValues = new ArrayList<Integer>();
         for(int i=1; i<27;i++)
         {
-                bValues.add(i);
+            bValues.add(i);
         }
         a= (int) spinner1.getSelectedItem();
         // Showing selected spinner item

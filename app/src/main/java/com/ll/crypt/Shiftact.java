@@ -10,7 +10,7 @@ import android.widget.EditText;
 /**
  * Created by Liz on 5/9/16.
  */
-public class ShiftActivity extends AppCompatActivity
+public class Shiftact extends AppCompatActivity
 {
     private Button encryptText;
     private Button decryptText;
