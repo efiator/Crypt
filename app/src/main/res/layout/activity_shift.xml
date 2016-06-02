@@ -79,8 +79,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ENCRYPT"
-        android:onClick="onEncrypt"
         android:id="@+id/encrypt"
+        android:onClick="onEncrypt"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
@@ -89,6 +89,7 @@
         android:layout_height="wrap_content"
         android:text="DECRYPT"
         android:id="@+id/decrypt"
+        android:onClick="onDecrypt"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>

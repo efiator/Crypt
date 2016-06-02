@@ -23,13 +23,28 @@ public class ShiftActivity extends AppCompatActivity {
         EditText inputTxt = (EditText) findViewById(R.id.input);
        TextView outputTxt=(TextView) findViewById(R.id.output);
         EditText shiftKey = (EditText) findViewById(R.id.key);
+        Shift shift= new Shift();
         String txt = inputTxt.getText().toString();
         String inputKey = shiftKey.getText().toString();
         int key=Integer.parseInt(inputKey);
-        Shift shift= new Shift();
         String result = shift.encrypt(txt,key);
         outputTxt.setText(result);
 
+    }
+
+    public void onDecrypt(View view)
+    {
+        Button decryptTxt = (Button) findViewById(R.id.decrypt);
+        EditText inputTxt = (EditText) findViewById(R.id.input);
+        TextView outputTxt=(TextView) findViewById(R.id.output);
+        EditText shiftKey = (EditText) findViewById(R.id.key);
+        Shift shift= new Shift();
+        String txt = inputTxt.getText().toString();
+        int key=Integer.parseInt(shiftKey.getText().toString());
+        String result = shift.decrypt(txt, key);
+        outputTxt.setText(result);
 
     }
+
+
 }
