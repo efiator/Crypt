@@ -44,7 +44,7 @@
         android:text="Shift"
         android:id="@+id/button"
         android:onClick="shift"
-        android:layout_below="@+id/affine"
+        android:layout_above="@+id/des"
         android:layout_alignEnd="@+id/textView2" />
 
     <TextView

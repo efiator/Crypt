@@ -20,23 +20,9 @@
         </activity>
         <activity
             android:name=".ShiftActivity"
+            android:label="@string/title_activity_shift"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".AffineActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Shiftact"
-            android:label="@string/title_activity_shiftact"
-            android:parentActivityName=".ShiftActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ll.crypt.ShiftActivity" />
-        </activity>
-        <activity
-            android:name=".Affine"
-            android:label="@string/title_activity_affine"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AffineActivity" />
     </application>
 
 </manifest>

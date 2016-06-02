@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void shift(View view) {
-        Intent intent = new Intent(this, Shiftact.class);
+        Intent intent = new Intent(this, ShiftActivity.class);
         startActivity(intent);
     }
 
     public void affine(View view) {
-        Intent intent = new Intent(this, Affine.class);
+        Intent intent = new Intent(this, AffineActivity.class);
         startActivity(intent);
     }
 }

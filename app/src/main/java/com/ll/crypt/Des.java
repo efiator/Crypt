@@ -2,11 +2,7 @@ package com.ll.crypt;
 
 public class Des
 {
-    public final static void main (String[] args)
-    {
 
-        System.out.println("Test this later");
-    }
 
     public static int [] permut1(int [] key)
     {
