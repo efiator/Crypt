@@ -2,12 +2,11 @@ package com.ll.crypt;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.view.View;
 
-public class ShiftActivity extends AppCompatActivity {
+public class ShiftActivity extends AppCompatActivity{
 
 
     @Override
@@ -19,9 +18,8 @@ public class ShiftActivity extends AppCompatActivity {
 
     public void onEncrypt(View view)
     {
-        Button encryptTxt = (Button) findViewById(R.id.encrypt);
         EditText inputTxt = (EditText) findViewById(R.id.input);
-       TextView outputTxt=(TextView) findViewById(R.id.output);
+        TextView outputTxt=(TextView) findViewById(R.id.output);
         EditText shiftKey = (EditText) findViewById(R.id.key);
         Shift shift= new Shift();
         String txt = inputTxt.getText().toString();
@@ -34,7 +32,6 @@ public class ShiftActivity extends AppCompatActivity {
 
     public void onDecrypt(View view)
     {
-        Button decryptTxt = (Button) findViewById(R.id.decrypt);
         EditText inputTxt = (EditText) findViewById(R.id.input);
         TextView outputTxt=(TextView) findViewById(R.id.output);
         EditText shiftKey = (EditText) findViewById(R.id.key);
