@@ -1,5 +1,6 @@
 package com.ll.crypt;
 
+import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -19,27 +20,30 @@ public class ShiftActivity extends AppCompatActivity{
     public void onEncrypt(View view)
     {
         EditText inputTxt = (EditText) findViewById(R.id.input);
-        TextView outputTxt=(TextView) findViewById(R.id.output);
         EditText shiftKey = (EditText) findViewById(R.id.key);
         Shift shift= new Shift();
         String txt = inputTxt.getText().toString();
         String inputKey = shiftKey.getText().toString();
         int key=Integer.parseInt(inputKey);
         String result = shift.encrypt(txt,key);
-        outputTxt.setText(result);
-
+        AlertDialog alert = new AlertDialog.Builder(ShiftActivity.this).create();
+        alert.setTitle("The encrypted text is: ");
+        alert.setMessage(result);
+        alert.show();
     }
 
     public void onDecrypt(View view)
     {
         EditText inputTxt = (EditText) findViewById(R.id.input);
-        TextView outputTxt=(TextView) findViewById(R.id.output);
         EditText shiftKey = (EditText) findViewById(R.id.key);
         Shift shift= new Shift();
         String txt = inputTxt.getText().toString();
         int key=Integer.parseInt(shiftKey.getText().toString());
         String result = shift.decrypt(txt, key);
-        outputTxt.setText(result);
+        AlertDialog alert = new AlertDialog.Builder(ShiftActivity.this).create();
+        alert.setTitle("The decrypted text is: ");
+        alert.setMessage(result);
+        alert.show();
 
     }
 

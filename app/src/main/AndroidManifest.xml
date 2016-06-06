@@ -23,6 +23,7 @@
             android:label="@string/title_activity_shift"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AffineActivity" />
+        <activity android:name=".SdesActivity"></activity>
     </application>
 
 </manifest>
