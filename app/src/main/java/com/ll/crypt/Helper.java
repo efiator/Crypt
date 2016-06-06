@@ -1,7 +1,10 @@
 package com.ll.crypt;
 
 /**
- * Created by Liz on 6/5/16.
+ * Author: Elizabeth Fiator
+ * Version: June 5, 2016.
+ * Description: This class has the necessary helper methods
+ * needed for s-des encryption and decryption.
  */
 public class Helper
 {

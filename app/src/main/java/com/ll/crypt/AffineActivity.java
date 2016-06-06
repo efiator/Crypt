@@ -3,12 +3,15 @@ package com.ll.crypt;
 import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.view.View;
-
-import java.util.Arrays;
+/*
+*Author: Elizabeth Fiator
+* Version: June 5, 2016
+* Description: This class has the necessary methods for encryption
+* and decryption to happen when a user clicks a button.
+ */
 
 public class AffineActivity extends AppCompatActivity {
 
@@ -18,7 +21,9 @@ public class AffineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_affine);
     }
-
+    //This method calls the encryption method from the AffineCipher class
+    //for encryption. The method is called when a user clicks on the
+    //encrypt method.The output is displayed using an alert box.
     public void onEncrypt(View view)
     {
         AffineCipher affine = new AffineCipher();
@@ -35,6 +40,9 @@ public class AffineActivity extends AppCompatActivity {
         alert.show();
     }
 
+    //This method calls the decryption method from the AffineCipher class
+    //for decryption. The method is called when a user clicks on the
+    //decrypt method.The output is displayed using an alert box.
     public void onDecrypt(View view)
     {
         AffineCipher affine = new AffineCipher();

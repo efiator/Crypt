@@ -13,7 +13,6 @@ package com.ll.crypt;
  of the plaintext.
  The function used in decrypting is p=((inverse of a (mod 26)*(c-b))(mod 26)
 */
-//import javax.swing.JOptionPane;
 public class AffineCipher
 {
 
@@ -31,7 +30,7 @@ public class AffineCipher
     }
 
     /*
-    This method decrypts an ecrypted text.
+    This method decrypts an encrypted text.
     It finds the inverse mod of a and uses it to
     find the correct numerical value of the plaintext
     The parameter is the ciphered text
@@ -42,20 +41,20 @@ public class AffineCipher
         int inv_a =0;
         int x =0;
         //finds the inverse mod of a
-        for(int i=0; i<26;i++)
+        if(a !=0 && a!=13 && a!=26 && b!=0 && b!=26)
         {
-            x=(a * i)%26;
-            if(x==1)
-            {
-                inv_a=i;
-                System.out.println("the inverse of a is "+i);
+            for (int i = 0; i < 26; i++) {
+                x = (a * i) % 26;
+                if (x == 1) {
+                    inv_a = i;
+                    System.out.println("the inverse of a is " + i);
+                }
             }
-        }
-        //Uses the inverse of a to compute the correct numerical equivalence
-        //of the plaintext
-        for(int i=0;i<ctxt.length();i++)
-        {
-            ptxt = ptxt+(char) (((inv_a*((ctxt.charAt(i)-b))%26))+65);
+            //Uses the inverse of a to compute the correct numerical equivalence
+            //of the plaintext
+            for (int i = 0; i < ctxt.length(); i++) {
+                ptxt = ptxt + (char) (((inv_a * ((ctxt.charAt(i) - b)) % 26)) + 65);
+            }
         }
         return ptxt;//returns the decrypted text
     }

@@ -7,6 +7,12 @@ import android.widget.TextView;
 import android.widget.EditText;
 import android.view.View;
 
+/*
+*Author: Elizabeth Fiator
+* Version: June 5, 2016
+* Description: This is the activity class that calls the proper
+* methods when a user clicks on a button.
+ */
 public class ShiftActivity extends AppCompatActivity{
 
 
@@ -17,6 +23,9 @@ public class ShiftActivity extends AppCompatActivity{
         setContentView(R.layout.activity_shift);
     }
 
+    //This method calls the encryption method from the Shift class
+    //for encryption. The method is called when a user clicks on the
+    //encrypt method. The output is displayed using an alert box.
     public void onEncrypt(View view)
     {
         EditText inputTxt = (EditText) findViewById(R.id.input);
@@ -31,7 +40,9 @@ public class ShiftActivity extends AppCompatActivity{
         alert.setMessage(result);
         alert.show();
     }
-
+    //This method calls the decryption method from the Shift class
+    //for decryption. The method is called when a user clicks on the
+    //decrypt method. The output is displayed using an alert box.
     public void onDecrypt(View view)
     {
         EditText inputTxt = (EditText) findViewById(R.id.input);

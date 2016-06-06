@@ -1,7 +1,13 @@
 package com.ll.crypt;
 
 /**
- * Created by Liz on 6/5/16.
+ * Author: Elizabeth Fiator
+ * Version: June 5, 2016.
+ * Description: This class uses helper methods from the Helper.Java class
+ * for encryption and decryption.
+ * Both methods take String inputs of the text and a key.
+ * Using the toInt method, both Strings get converted to an array of
+ * binary integers to be used.
  */
 public class Sdes
 {

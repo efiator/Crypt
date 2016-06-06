@@ -24,19 +24,18 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text=" "
         android:id="@+id/a"
-        android:layout_below="@+id/textView3"
+        android:layout_above="@+id/textView5"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="48dp"
-        android:layout_alignEnd="@+id/textView3" />
+        android:layout_alignEnd="@+id/b" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/b"
-        android:layout_below="@+id/a"
+        android:layout_above="@+id/textView4"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/a" />
+        android:layout_alignEnd="@+id/input" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,7 +43,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Enter the text:"
         android:id="@+id/textView4"
-        android:layout_below="@+id/b"
+        android:layout_above="@+id/input"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -53,28 +52,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text=" "
         android:id="@+id/input"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/b" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="The output is:"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/input"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=" "
-        android:id="@+id/output"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/input" />
 
     <Button
         android:layout_width="wrap_content"
@@ -93,14 +73,22 @@
         android:id="@+id/decrypt"
         android:onClick="onDecrypt"
         android:layout_alignBottom="@+id/encrypt"
-        android:layout_alignEnd="@+id/output" />
+        android:layout_alignEnd="@+id/input" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Value for a:"
+        android:text="Value for b(must be between 1 and 25):"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/b"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value for a(must be between 1 and 25 but not 13):"
         android:id="@+id/textView6"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3" />
+        android:layout_above="@+id/a"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

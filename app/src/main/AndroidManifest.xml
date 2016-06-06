@@ -18,10 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ShiftActivity"
-            android:label="@string/title_activity_shift"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ShiftActivity" />
         <activity android:name=".AffineActivity" />
         <activity android:name=".SdesActivity"></activity>
     </application>
