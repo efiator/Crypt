@@ -46,4 +46,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AffineActivity.class);
         startActivity(intent);
     }
+
+    public void sdes(View view) {
+        Intent intent = new Intent(this, SdesActivity.class);
+        startActivity(intent);
+    }
 }

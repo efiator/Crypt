@@ -12,10 +12,10 @@
 
     <Button
         android:id="@+id/des"
-        android:text="DES"
+        android:text="S-DES"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
+        android:onClick="sdes"
         android:textColor="#3d0a0a"
         android:layout_below="@+id/affine"
         android:layout_centerHorizontal="true"
